@@ -1,7 +1,10 @@
 
 
 
-def calculate_distance(input):
+def calculate_distance(path):
+	with open(path) as file:
+		input = file.read().strip()
+
 	list_input = input.split(", ")
 	
 	acum = 0
