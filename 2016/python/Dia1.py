@@ -6,6 +6,7 @@ def calculate_distance(input):
 	for i in list_input:
 		print(i[0], i[1])
 		acum += int(i[1])
+		acum = "R2, L3"
 
 		print(acum)
 	return acum
