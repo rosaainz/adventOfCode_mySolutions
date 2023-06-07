@@ -14,6 +14,9 @@ def calculate_distance(path_file):
 	]
 
 	rotation = {'R':1, 'L':-1}
+
+	direction = 0
+	x,y = 0,0
 	
 	acum = 0
 	for i in list_input:
