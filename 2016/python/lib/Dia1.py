@@ -13,7 +13,7 @@ def calculate_distance(path_file):
 			{'L': 1, 'R':-1}  #W
 	]
 
-
+	rotation = {'R':1, 'L':-1}
 	
 	acum = 0
 	for i in list_input:
