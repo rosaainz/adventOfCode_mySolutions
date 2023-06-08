@@ -1,4 +1,7 @@
-data = open("input.txt").readline()
 
-print(data)
+a,b,c = input()
+
+print(a)
+
+
 
