@@ -1,6 +1,9 @@
 class Foo{
-  def delivered_houses(List input) {
+  def deliveredHouses(List input) {
+    coordinates(input).unique().size()
+  }
 
+  private coordinates(List input){
     def coor = [0,0]
     def result =  input.collect {
       switch(it) {
@@ -21,10 +24,20 @@ class Foo{
     }
     // println result
     result << [0,0]
-    // println result
-    result.unique().size()
+    result
+  }
+
+  def roboSanta(List input){
+    def even = input.withIndex().collect{ x, index -> index % 2 == 0 ? x : null } - null
+    def odd = input.withIndex().collect{ x, index -> index % 2 == 1 ? x : null } - null
+    def robot = coordinates(odd)
+    def santa = coordinates(even)
+    (robot + santa).unique().size()
   }
 }
 
 def input = new File("input.txt").text.toList()
-println "The result is: ${new Foo().delivered_houses(input)}"
+// println "The result is: ${new Foo().delivered_houses(input)}"
+
+println new Foo().roboSanta(input)
+
